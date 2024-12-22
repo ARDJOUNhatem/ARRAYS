@@ -1,13 +1,18 @@
 #include <stdio.h>
 
 int main(){
-   int num, factorial = 1;
-   printf("Enter a number: ");
-   scanf("%d", &num);
-   for(int i = 1;i <= num; i++){
-      factorial *= i;
-   }
-   printf("Factorial: %d\n", factorial);
-   return 0;
+    int arr[5], sum = 0;
+    float avg;
+    printf("Enter 5 integer: ");
+    for(int i = 0; i < 5; i++){
+        scanf("%d", &arr[i]);
+    }
+    for(int i = 0; i < 5 ; i++){
+        sum += arr[i];
+    }
+    avg = sum / 5.0;
+    printf("sum : %d, average: %2.f\n", sum, avg);
+    return 0;
 }
-// this code ask user enter a number then perint the factorial of number.
+//This code is an array consisting of 5 indexes .
+// and print a sum of elements and average, average = (sum of elements / number of elements) .

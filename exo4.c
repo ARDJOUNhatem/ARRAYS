@@ -1,14 +1,25 @@
 #include <stdio.h>
 
-int main(){
-    int n,i = 1;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    while (i <= n){
-         printf("%d", i);
-         i++;
+int main() {
+    int arr[5], temp;
+
+    printf("Enter 5 integers: ");
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < 5 / 2; i++) {
+        temp = arr[i];
+        arr[i] = arr[4 - i]; 
+        arr[4 - i] = temp; 
+    }
+
+    printf("Reversed array: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", arr[i]); 
     }
     printf("\n");
+
     return 0;
 }
-//this code  ask a user enter a number and print the numbers 1->number with use while loop.
+// This code is to enter the elements of an array consisting of 5 indexes then print reversed array.
